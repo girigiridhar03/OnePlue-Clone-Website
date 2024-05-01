@@ -9,18 +9,17 @@
     rel="stylesheet"/>
     
 </head>
-<body>
+<body class="overflow-x-hidden">
    
 
-    <div id="main">
-        <nav class="flex items-center justify-between p-4 shadow-md lg:py-4 lg:px-12">
+        <nav class="flex items-center justify-between p-4 shadow-md lg:py-4 lg:px-7 xl:px-14 relative overflow-hidden">
             <div class="flex items-center flex-1">
                 <img src="assets/onetopia.png" alt="" class="w-8 cursor-pointer">
                 <span class="font-bold text-red-500 cursor-pointer">ONEPLUS</span>
             </div>
 
             <div>
-                <ul class="xl:flex items-center gap-10 hidden">
+                <ul class="xl:flex xl:items-center  xl:gap-10 hidden">
                     <li class="font-semibold cursor-pointer hover:text-red-500">Store</li>
                     <li class="font-semibold cursor-pointer hover:text-red-500">Phone</li>
                     <li class="font-semibold cursor-pointer hover:text-red-500">Tablet</li>
@@ -39,9 +38,61 @@
             <div class="flex items-center gap-5  flex-1 justify-end">
                 <i class="ri-search-line font-semibold text-lg lg:cursor-pointer"></i>
                 <i class="ri-shopping-cart-line font-semibold text-lg lg:cursor-pointer"></i>
-                <i class="ri-menu-line font-semibold text-lg xl:hidden lg:cursor-pointer"></i>
+                <i id="menu-icon" class="ri-menu-line font-semibold text-lg xl:hidden lg:cursor-pointer"></i>
                 <i class="ri-account-circle-line  text-2xl hidden xl:block lg:cursor-pointer"></i>
             </div>
+
+            <div id="nav-slider" class="fixed w-[100%] lg:w-[50%] h-[100vh] bg-white top-0 right-[-100%] lg:right-[-50%] xl:hidden flex py-14 px-8 flex-col gap-5 shadow-2xl z-[99]">
+
+                <i id="nav-close" class="ri-close-line absolute right-5 top-5 text-xl font-bold cursor-pointer  w-8 h-8 flex items-center justify-center"></i>
+                
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/bundles.png" alt="">
+               <span id="nav-text" class="text-base font-semibold cursor-pointer">Store</span>
+              </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/OnePlus115G.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">Phone</span>
+             </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/pad-nav.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">Tablet</span>
+               </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/almond-silver.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">Wearables</span>
+            </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/eular.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">Audio</span>
+              </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/power.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">More Products</span>
+              </div>
+
+               <div class="flex items-center gap-4 ">
+                <img id="nav-img" class="w-20" src="assets/onetopia.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">OneTopia</span>
+               </div>
+
+               <div class="flex items-center gap-4 "> 
+                <img id="nav-img" class="w-20" src="assets/community.png" alt="">
+                <span id="nav-text" class="text-base font-semibold cursor-pointer">Community</span>
+              </div>
+
+               <div class="flex items-center gap-4" >
+                 <img id="nav-img" class="w-20" src="https://www.oneplus.in/content/dam/oasis/page/2024/nav/common/service.png" alt="">
+                 <span id="nav-text" class="text-base font-semibold cursor-pointer">Support</span>
+             </div>
+            </div>
+
+
         </nav>
 
 
@@ -50,7 +101,8 @@
                 <h5 class="text-sm">Snapdragon 7 Gen 3 | Up to 256 GB of storage</h5>
                 <h1 class="text-3xl font-semibold mt-2">OnePlus Nord CE4</h1>
             </div>
-            <div id="hero-section" class="w-full h-[45vh] bg-no-repeat bg-bottom md:bg-center md:h-[35vh]  bg-cover flex items-end xl:h-[70vh] xl:flex-col xl:items-start xl:justify-between p-4    xl:py-5 xl:px-10" style="background-image: url(https://www.oneplus.in/content/dam/oasis/page/2024/in/home/benz/4.19_Benz-launch-desktop.webp.thumb.webp);">
+
+            <div id="hero-section" class="w-full h-[50vh] bg-no-repeat overflow-hidden bg-bottom md:bg-center md:h-[35vh]  bg-cover flex items-end xl:h-[70vh] xl:flex-col xl:items-start xl:justify-between p-4    xl:py-5 xl:px-14" style="background-image: url(https://www.oneplus.in/content/dam/oasis/page/2024/in/home/benz/4.19_Benz-launch-desktop.webp.thumb.webp);">
                 
                 <div class="p-4 hidden xl:flex flex-col" id="headings">
                     <h5 class="text-lg">Snapdragon 7 Gen 3 | Up to 256 GB of storage</h5>
@@ -72,8 +124,51 @@
         </div>
 
 
+       <div id="section-two" class="mt-2 w-[100%] h-[90vh]  bg-cover bg-center flex flex-col justify-between py-8 px-4 xl:flex-row xl:items-center xl:justify-around bg-no-repeat" style="background-image: url('https://www.oneplus.in/content/dam/oasis/page/2024/in/home/dual/0426/KV_OP12series_4.26-tablet.jpg.thumb.webp');">
+           
+          <div class="text-center flex flex-col items-center gap-2 xl:w-[20%]">
+              <h2 class="text-3xl font-semibold lg:text-4xl">OnePlus 12R</h2>
+              <p class="font-semibold lg:text-xl">From ₹3167/mo.for 12 mo.with No Cost EMI or ₹37,999 Incl Bank Discount.</p>
+              <p class="font-semibold lg:text-xl">Save up to ₹5000 when you exchange your eligible phone from May 2nd.</p>
+              <div id="bt-learnMore" class="flex items-end gap-2 my-5">
+                <button id="button1" class="bg-black text-white py-1 px-3 cursor-pointer md:px-10">Buy Now</button>
+                <p id="learnMore" class="font-lg border-b-2 border-b-black font-semibold cursor-pointer">Learn More</p>
+              </div>
+          </div>
+           
+          
+          <div class="text-center flex flex-col items-center gap-2 xl:w-[20%]">
+            <h2 class="text-3xl font-semibold lg:text-4xl">OnePlus 12</h2>
+            <p class="font-semibold lg:text-lg">From ₹5250/mo.for 12 mo.with No Cost EMI or ₹62,999 Incl Bank Discount.</p>
+              <p class="font-semibold lg:text-lg">Save up to ₹12000 when you exchange your eligible phone from May 2nd.</p>
+              <div id="bt-learnMore" class="flex items-end gap-2 my-5">
+                <button id="button1" class="bg-black text-white py-1 px-3 cursor-pointer md:px-10">Buy Now</button>
+                <p id="learnMore" class="font-lg border-b-2 border-b-black font-semibold cursor-pointer">Learn More</p>
+              </div>
+          </div>
+
+       </div>
+
+  
+
+     <div class="mt-2 w-[100%] h-[50vh] xl:h-[70vh] bg-cover bg-center bg-no-repeat flex flex-col justify-between py-4 px-5 xl:px-14 xl:py-10"  style="background-image: url('https://www.oneplus.in/content/dam/oasis/page/2024/in/home/summer-sale/kv-pad.jpg.thumb.webp');">
+        <div>
+            <h2 class="text-3xl font-semibold lg:text-4xl">One Summer Sale</h2>
+        </div>
+        <div class="md:w-[46%] lg:w-[30%] xl:w-[20%]">
+            <p class="text-sm font-semibold xl:text-lg xl:font-medium">Coming soon on May 2nd Hit 'Notify Me' and stand a chance to win a free OnePlus Keyboard 81Pro and more!</p>
+            <button id="button1" class="mt-2 bg-black text-white py-1 px-3 cursor-pointer md:px-10">Notify Me</button>
+        </div>
+     </div>
 
 
+
+     
+
+
+
+    <div class="w-full h-[100vh]">
+        
     </div>
 
 
@@ -91,12 +186,8 @@
 
 
 
-
-
-
-
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
